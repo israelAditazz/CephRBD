@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ceph-pv
+  labels:
+    demo: ceph-pv
+spec:
+  accessModes: [ "ReadWriteOnce" ]
+  resources:
+    requests:
+      #fix this accordly you want
+      storage: 1Gi
+  storageClassName: rbd
